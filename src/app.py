@@ -1,5 +1,5 @@
-import dash
-from dash import html, dcc, Input, Output, State
+#import dash
+from dash import Dash, html, dcc, Input, Output, State
 import dash_bootstrap_components as dbc
 #from PIL import Image, ImageDraw, ImageFont
 #import user_validation as uv
@@ -54,8 +54,7 @@ cards = dbc.Row(
     ]
 )
 
-
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.JOURNAL])
+app = Dash(__name__,external_stylesheets=[dbc.themes.JOURNAL])
 server = app.server
 app.layout = html.Div([html.H1('Olimpiada Mexicana de Matemáticas',
                                style={'textAlign': 'center'}),
