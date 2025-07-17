@@ -55,7 +55,7 @@ cards = dbc.Row(
 )
 
 
-app = dash.Dash(external_stylesheets=[dbc.themes.JOURNAL])
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.JOURNAL])
 server = app.server
 app.layout = html.Div([html.H1('Olimpiada Mexicana de Matemáticas',
                                style={'textAlign': 'center'}),
@@ -135,5 +135,5 @@ def download_click(n, name_level_data):
 """
 #---------------------------------------------------------------------------------------------------
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
 
