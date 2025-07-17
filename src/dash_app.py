@@ -1,8 +1,8 @@
 import dash
 from dash import html, dcc, Input, Output, State
 import dash_bootstrap_components as dbc
-from PIL import Image, ImageDraw, ImageFont
-import user_validation as uv
+#from PIL import Image, ImageDraw, ImageFont
+#import user_validation as uv
 
 validation_card = dbc.Card(
     [
@@ -67,6 +67,7 @@ app.layout = html.Div([html.H1('Olimpiada Mexicana de Matemáticas',
                        ])
 
 #---------------------------------------------------------------------------------------------------
+"""
 @app.callback(
     [Output("validation_result", "children"),
      Output("validation_result", "color"),
@@ -131,8 +132,8 @@ def download_click(n, name_level_data):
                         html.Br(),
                         'Calificación obtenida: {}'.format(name_level_data['score'])]),
                 'success']
-
+"""
 #---------------------------------------------------------------------------------------------------
 if __name__ == '__main__':
-    app.run_server()
+    app.run()
 
